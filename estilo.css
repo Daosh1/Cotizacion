@@ -1,0 +1,38 @@
+/* variables*/
+:root {
+	--morado: #5E17EB;
+	--black: #000;
+	--text: #515151;
+	--negrita: #1b1b1b;
+}
+
+body {
+	color: var(--text);
+}
+
+/*elementos globales*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--negrita)
+}
+
+/* elementos especificos*/
+
+header#cabezote-principal h1 {
+	color: #5E17EB;
+}
+
+header#cabezote-principal div#Cliente p span {
+	display: block;
+}
+
+header#cabezote-principal div#Cliente p span:first-child {
+	color: var(--morado);
+}
+
+
+/*header#cabezote-principal div#Cliente */
