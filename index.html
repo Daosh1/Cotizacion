@@ -9,42 +9,50 @@
 </head>
 
 <body>
-	<header id="cabezote-principal">
-		<h1>Cotizacion</h1>
-		<div id="Cliente">
-			<p>
-				<span>Cliente</span>
-				<span>Claudia</span>
-				<span>26 Noviembre de 2024</span>
-			</p>
-		</div>
-		<img src="logo.jpg" alt="logo" width="120" />
-	</header>
+	<section id="data-input">
+		<h2>Ingreso de datos</h2>
+		<label for="nombre-cliente">
+			<span>Nombre del cliente:</span>
+			<input type="text" name="nombre-cliente" id="nombre-cliente" placeholder="Nombre del cliente">
+		</label>
+	</section>
 	<main>
+		<header id="cabezote-principal">
+			<h1>Cotizacion</h1>
+			<div id="Cliente">
+				<p>
+					<span>Cliente</span>
+					<span>Claudia</span>
+					<span>26 Noviembre de 2024</span>
+				</p>
+			</div>
+			<img src="logo.jpg" alt="logo" width="120" />
+		</header>
 		<section id="desc">
 			<header>
 				<h2>Descripción</h2>
 			</header>
 			<article>
-				<table>
-					<tr>
-						<td>Dvr, disco duro y camaras de seguridad x5.</td>
-						<td></td>
+				<table id="item-desc">
+					<tr class="linea">
+						<td class="item-desc__text">Dvr, disco duro y camaras de seguridad x5.</td>
+						<td class="item-desc__price">$ 120.000</td>
 					</tr>
-					<tr>
-						<td>Cable utp, fuentes de poder y video balun</td>
-						<td></td>
+					<tr class="linea">
+						<td class="item-desc__text">Cable utp, fuentes de poder y video balun</td>
+						<td class="item-desc__price">$ 1.200.000</td>
 					</tr>
-					<tr>
-						<td>Materiales a necesitar "cajas de paso,tornillos chasos, tuvo mt,etc".</td>
-						<td></td>
+					<tr class="linea">
+						<td class="item-desc__text">Materiales a necesitar "cajas de paso,tornillos chasos, tuvo
+							mt,etc".
+						</td>
+						<td class="item-desc__price">$150.000</td>
 					</tr>
-					<tr>
-						<td>Mano de obra</td>
-						<td></td>
+					<tr class="linea">
+						<td class="item-desc__text">Mano de obra</td>
+						<td class="item-desc__price">$300.000</td>
 					</tr>
 				</table>
-				<p>*Tener en cuenta los colores</p>
 			</article>
 			<article>
 				<table>
