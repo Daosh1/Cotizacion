@@ -110,41 +110,45 @@ header#cabezote-principal img {
 	padding: 1em;
 }
 
+#wrapper-total-descu {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1em;
+}
+
 #total-descu {
 	border-collapse: collapse;
-	text-align: right;
-	margin: 1em;
-
 }
-
-#total-descu .linea {
-	border: solid .125em var(--text);
-	height: calc(2*var(--line-height));
-
-}
-
 
 #total-descu .linea .total-desc__price {
 	font-weight: bold;
+	padding-right: 1.75em;
 }
 
-#total-descu .linea td[class^="total-desc__"] {
+/*
+#total-descu .linea td.total-desc__texto,
+#total-descu .linea td.total-desc__price
+*/
+#total-descu [class^="total-desc__"] {
 	background-color: var(--morado);
 	color: white;
-
+	padding: .75em;
 }
 
-#formaDePago header h2 {
-	border-bottom: #000;
-	padding: 1em;
+#total-descu .total-desc__texto {
+	padding-right: 2.25em;
+	padding-left: 1.75em;
+}
+
+#formaDePago {
+	/* colcoarle borde inferiorA*/
+	margin-top: 1em;
 }
 
 #formaDePago ul li {
-	padding-bottom: 1em;
+	padding: 1em;
 
-}
-
-/* @media print {
+	/* @media print {
 
 body {
 	background-color: aqua;
