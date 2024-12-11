@@ -56,8 +56,6 @@ header#cabezote-principal h1 {
 	width: 100%;
 }
 
-header#cabezote-principal div#Cliente {}
-
 header#cabezote-principal div#Cliente p span {
 	display: block;
 	text-transform: uppercase;
@@ -78,7 +76,7 @@ header#cabezote-principal img {
 }
 
 #desc header {
-	margin-top: 4em;
+	margin-top: 1em;
 }
 
 #desc header h2 {
@@ -112,9 +110,43 @@ header#cabezote-principal img {
 	padding: 1em;
 }
 
+#total-descu {
+	border-collapse: collapse;
+	text-align: right;
+	margin: 1em;
+
+}
+
+#total-descu .linea {
+	border: solid .125em var(--text);
+	height: calc(2*var(--line-height));
+
+}
+
+
+#total-descu .linea .total-desc__price {
+	font-weight: bold;
+}
+
+#total-descu .linea td[class^="total-desc__"] {
+	background-color: var(--morado);
+	color: white;
+
+}
+
+#formaDePago header h2 {
+	border-bottom: #000;
+	padding: 1em;
+}
+
+#formaDePago ul li {
+	padding-bottom: 1em;
+
+}
+
 /* @media print {
 
-	body {
-		background-color: aqua;
+body {
+	background-color: aqua;
 	}
-}
+	}
