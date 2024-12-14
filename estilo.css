@@ -19,10 +19,11 @@ html {
 body {
 	color: var(--text);
 	font-size: 1.25rem;
-	margin: 2.3em 4.3em 0em;
+	min-height: 100vh;
 }
 
 * {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
@@ -37,8 +38,12 @@ h6 {
 	font-size: 1.5em;
 }
 
-/* elementos especificos*/
 
+/**********************
+ elementos especificos
+***************************/
+
+/* Main header*/
 header#cabezote-principal {
 	display: flex;
 	align-items: center;
@@ -69,10 +74,19 @@ header#cabezote-principal img {
 	width: 140px;
 }
 
+
+
+
+/*Main section descripcion*/
+
 #data-input {
 	border-bottom: solid .25em #000;
 	margin-bottom: 2em;
 	padding: 1em;
+}
+
+main {
+	margin: 2.3em 4.3em;
 }
 
 #desc header {
@@ -113,7 +127,7 @@ header#cabezote-principal img {
 #wrapper-total-descu {
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 #total-descu {
@@ -123,6 +137,7 @@ header#cabezote-principal img {
 #total-descu .linea .total-desc__price {
 	font-weight: bold;
 	padding-right: 1.75em;
+	text-align: right;
 }
 
 /*
@@ -136,21 +151,71 @@ header#cabezote-principal img {
 }
 
 #total-descu .total-desc__texto {
-	padding-right: 2.25em;
+	padding-right: 2.75em;
 	padding-left: 1.75em;
 }
 
+
+
+/*main section forma de pago*/
+
 #formaDePago {
 	/* colcoarle borde inferiorA*/
-	margin-top: 1em;
+	margin-top: 3em;
 }
 
-#formaDePago ul li {
-	padding: 1em;
+#formaDePago ul {
+	list-style: none;
+}
 
-	/* @media print {
+#formaDePago li {
+	position: relative;
+	padding-left: 1.25em;
+	margin: .5em 0;
+}
 
-body {
-	background-color: aqua;
+#formaDePago ul li::before {
+	background-color: var(--text);
+	border-radius: 100%;
+	content: " ";
+	display: block;
+	left: 0.25em;
+	top: 0.65em;
+	width: 0.5em;
+
+	position: absolute;
+	height: 0.5em;
+	transform: translate(0, -50%);
+}
+
+.contenedor-borde {
+	border-radius: 4em;
+	overflow: hidden;
+}
+
+#wrapper-total-descu .contenedor-borde {
+	border-radius: 1em;
+}
+
+
+
+/* footer - pie de pagina */
+footer {
+	position: sticky;
+	top: 100vh;
+}
+
+footer .contenedor-borde {
+	background: linear-gradient(to right, white, var(--morado), var(--black));
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	height: 6em;
+	margin-top: 3em;
+}
+
+@media print {
+	#data-input {
+		display: none;
 	}
-	}
+
+}

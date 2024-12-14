@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cotizacion</title>
-	<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet" href="estilo.css" media="screen">
+	<link href="estilo.css" media="print" rel="stylesheet" />
 </head>
 
 <body>
@@ -55,20 +56,22 @@
 				</table>
 			</article>
 			<article id="wrapper-total-descu">
-				<table id="total-descu">
-					<tr class="linea">
-						<td class="total-desc__texto">Subtotal</td>
-						<td class="total-desc__price">$0</td>
-					</tr>
-					<tr class="linea">
-						<td class="total-desc__texto">Descuento</td>
-						<td class="total-desc__price">$0</td>
-					</tr>
-					<tr class="linea">
-						<td class="total-desc__texto">Total</td>
-						<td class="total-desc__price">$1.360.000</td>
-					</tr>
-				</table>
+				<div class="contenedor-borde">
+					<table id="total-descu">
+						<tr class="linea">
+							<td class="total-desc__texto">Subtotal</td>
+							<td class="total-desc__price">$0</td>
+						</tr>
+						<tr class="linea">
+							<td class="total-desc__texto">Descuento</td>
+							<td class="total-desc__price">$0</td>
+						</tr>
+						<tr class="linea">
+							<td class="total-desc__texto">Total</td>
+							<td class="total-desc__price">$1.360.000</td>
+						</tr>
+					</table>
+				</div>
 			</article>
 		</section>
 		<section id="formaDePago">
@@ -76,15 +79,19 @@
 				<h2>Forma de pago</h2>
 			</header>
 			<ul>
-				<li class="inicioPago">Para iniciar el trabajo se requiere de un anticipo del 60% $810.000</li>
-				<li>Al finalizar se cancela el valor restante del 40% $550.000</li>
-				<li>Se brinda garant'ía de la instalaci'ón por un mes, no se responde por cambios hechos por un cliente
-					o una tercera persona</li>
+				<li class="inicioPago">
+					Para iniciar el trabajo se requiere de un anticipo del <strong>60%</strong> <span>$810.000</span>.
+				</li>
+				<li>
+					Al finalizar se cancela el valor restante del <strong>40%</strong> <span>$550.000</span>.
+				</li>
+				<li>Se brinda garantía de la instalación por un mes, no se responde por cambios hechos por un cliente
+					o una tercera persona.</li>
 			</ul>
 		</section>
 	</main>
 	<footer>
-		<div>Color morado</div>
+		<div class="contenedor-borde"></div>
 	</footer>
 </body>
 
