@@ -7,15 +7,32 @@
 	<title>Cotizacion</title>
 	<link rel="stylesheet" href="estilo.css" media="screen">
 	<link href="estilo.css" media="print" rel="stylesheet" />
+	<script src="cotizacion.js"></script>
 </head>
 
 <body>
 	<section id="data-input">
 		<h2>Ingreso de datos</h2>
-		<label for="nombre-cliente">
-			<span>Nombre del cliente:</span>
-			<input type="text" name="nombre-cliente" id="nombre-cliente" placeholder="Nombre del cliente">
-		</label>
+		<form>
+			<fieldset>
+				<legend>Datos del cliente</legend>
+				<label for="input-nombre-cliente">
+					<span>Nombre del cliente:</span>
+					<input type="text" name="nombre-cliente" id="input-nombre-cliente"
+						placeholder="Llena el nombre del cliente">
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Elementos de cotización</legend>
+				<input type="text">
+			</fieldset>
+			<fieldset oninput="x.value=parseInt(a.value)">
+				<legend>Anticipo</legend>
+				Anticipo de <input type="range" min="0" max="100" step="10" value="60" id="a">
+				<output name="x" for="a b">60</output>%
+			</fieldset>
+		</form>
+
 	</section>
 	<main>
 		<header id="cabezote-principal">
@@ -23,8 +40,8 @@
 			<div id="Cliente">
 				<p>
 					<span>Cliente</span>
-					<span>Claudia</span>
-					<span>26 Noviembre de 2024</span>
+					<span id="nombre-cliente"></span>
+					<span id="fecha-cotizacion"></span>
 				</p>
 			</div>
 			<img src="logo.jpg" alt="logo" width="120" />
