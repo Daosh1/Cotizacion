@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	padding: 20px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Sección de entrada de datos */
+.data-entry {
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.input-group {
+	display: flex;
+	gap: 10px;
+	margin: 10px 0;
+}
+
+input {
+	padding: 8px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+button {
+	padding: 8px 16px;
+	background: #6E2FF5;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #5b25cc;
+}
+
+/* Sección de cotización */
+.quotation {
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	margin-bottom: 30px;
+}
+
+.title-client h1 {
+	color: #6E2FF5;
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+.logo {
+	width: 150px;
+	height: auto;
+}
+
+.description-header {
+	background: #000;
+	color: white;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background: #f5f5f5;
+	margin-bottom: 5px;
+}
+
+.item-info {
+	flex-grow: 1;
+}
+
+.item-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.delete-btn {
+	background: #ff4444;
+	padding: 4px 8px;
+}
+
+.totals {
+	margin-top: 20px;
+	background: #6E2FF5;
+	color: white;
+	padding: 15px;
+	border-radius: 8px;
+	width: 300px;
+	margin-left: auto;
+}
+
+.total-item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.total {
+	font-weight: bold;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	padding-top: 5px;
+	margin-top: 5px;
+}

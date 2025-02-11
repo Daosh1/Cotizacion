@@ -14,6 +14,13 @@
 	<section id="data-input">
 		<h2>Ingreso de datos</h2>
 		<form>
+			<template id="template-desc-el">
+				<div>
+					<input type="text" name="productos-servicios" data-arreglo="" placeholder="Producto o servicio">
+					<input type="number" min="1" name="cantidad" placeholder="Cantidad">
+					<input type="number" name="valor-unitario" placeholder="Vr unitario">
+				</div>
+			</template>
 			<fieldset>
 				<legend>Datos del cliente</legend>
 				<label for="input-nombre-cliente">
@@ -24,13 +31,68 @@
 			</fieldset>
 			<fieldset>
 				<legend>Elementos de cotización</legend>
-				<input type="text">
+				<div id="listadoProductos-servicios">
+					<div id="item-1">
+						<p>1</p>
+						<input type="text" name="productos-servicios" data-arreglo="" placeholder="Producto o servicio">
+						<input type="number" min="1" name="cantidad" placeholder="Cantidad">
+						<input type="number" name="valor-unitario" placeholder="Vr unitario">
+					</div>
+				</div>
+				<div class="button-container">
+					<button type="button" class="btn-primary" onclick="addTemplate()">Agregar</button>
+				</div>
 			</fieldset>
+			<!-- Add these fields inside the form, before the anticipo fieldset -->
+			<fieldset>
+				<legend>Descuento</legend>
+				<div class="input-group">
+					<input type="number" id="input-descuento" placeholder="Ingrese el descuento">
+					<button type="button" class="btn-primary" onclick="agregarDescuento()">Agregar</button>
+				</div>
+			</fieldset>
+
 			<fieldset oninput="x.value=parseInt(a.value)">
 				<legend>Anticipo</legend>
-				Anticipo de <input type="range" min="0" max="100" step="10" value="70" id="a">
+				Anticipo de <input type="range" min="0" max="100" step="10" value="70" id="a" class="range-black">
 				<output name="x" for="a">60</output>%
 			</fieldset>
+
+			<fieldset>
+				<legend>Garantía</legend>
+				<select id="meses-garantia" class="select-meses">
+					<option value="1">0</option>
+					<option value="1">1 mes</option>
+					<option value="2">2 meses</option>
+					<option value="3">3 meses</option>
+					<option value="4">4 meses</option>
+					<option value="5">5 meses</option>
+					<option value="6">6 meses</option>
+					<option value="7">7 meses</option>
+					<option value="8">8 meses</option>
+					<option value="9">9 meses</option>
+					<option value="10">10 meses</option>
+					<option value="11">11 meses</option>
+					<option value="12">12 meses</option>
+				</select>
+			</fieldset>
+			<fieldset>
+				<legend>Descuento</legend>
+
+				<div class="descuento-container">
+					<input type="number" id="input-descuento" placeholder="Monto de Descuento">
+					<button onclick="agregarDescuento()">Aplicar Descuento</button>
+					<button onclick="deshacerDescuento()">Deshacer Descuento</button>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Forma de Pago Adicional</legend>
+				<div class="input-group">
+					<input type="text" id="input-forma-pago" placeholder="Ingrese forma de pago adicional">
+					<button type="button" class="btn-primary" onclick="agregarFormaPago()">Agregar</button>
+				</div>
+			</fieldset>
+
 		</form>
 	</section>
 	<main>
@@ -52,22 +114,12 @@
 			<article>
 				<table id="item-desc">
 					<tr class="linea">
-						<td class="item-desc__text">Dvr, disco duro y camaras de seguridad x5.</td>
-						<td class="item-desc__price">$ 120.000</td>
+						<td class="item-desc__text"></td>
+						<td class="item-desc__price">$</td>
 					</tr>
 					<tr class="linea">
-						<td class="item-desc__text">Cable utp, fuentes de poder y video balun</td>
-						<td class="item-desc__price">$ 1.200.000</td>
-					</tr>
-					<tr class="linea">
-						<td class="item-desc__text">Materiales a necesitar "cajas de paso,tornillos chasos, tuvo
-							mt,etc".
-						</td>
-						<td class="item-desc__price">$150.000</td>
-					</tr>
-					<tr class="linea">
-						<td class="item-desc__text">Mano de obra</td>
-						<td class="item-desc__price">$300.000</td>
+						<td class="item-desc__text"></td>
+						<td class="item-desc__price">$0</td>
 					</tr>
 				</table>
 			</article>
@@ -84,7 +136,7 @@
 						</tr>
 						<tr class="linea">
 							<td class="total-desc__texto">Total</td>
-							<td class="total-desc__price">$1.360.000</td>
+							<td class="total-desc__price">$0</td>
 						</tr>
 					</table>
 				</div>
@@ -96,12 +148,14 @@
 			</header>
 			<ul>
 				<li class="inicioPago">
-					Para iniciar el trabajo se requiere de un anticipo del <strong>60%</strong> <span>$810.000</span>.
+					Para iniciar el trabajo se requiere de un anticipo del <strong id="anticipo"></strong>%
+					<span>$0</span>.
 				</li>
 				<li>
-					Al finalizar se cancela el valor restante del <strong>40%</strong> <span>$550.000</span>.
+					Al finalizar se cancela el valor restante del <strong id="cancelar"></strong>%
+					<span>$0</span>.
 				</li>
-				<li>Se brinda garantía de la instalación por un mes, no se responde por cambios hechos por un cliente
+				<li>Se brinda garantía de la instalación de mes, no se responde por cambios hechos por un cliente
 					o una tercera persona.</li>
 			</ul>
 		</section>

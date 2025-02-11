@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sistema de Cotización</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<!-- Sección de entrada de datos -->
+		<section class="data-entry">
+			<h2>Ingreso de datos</h2>
+			<div class="client-data">
+				<label for="clientName">Nombre del cliente:</label>
+				<input type="text" id="clientName" placeholder="Llena el nombre del cliente">
+			</div>
+
+			<div class="quote-elements">
+				<h3>Elementos de cotización</h3>
+				<div class="input-group">
+					<input type="text" id="productService" placeholder="Producto o servicio">
+					<input type="number" id="quantity" placeholder="Cantidad">
+					<input type="number" id="unitPrice" placeholder="Vr unitario">
+					<button id="addItem">Agregar</button>
+				</div>
+			</div>
+
+			<div class="advance-payment">
+				<label for="advance">Anticipo:</label>
+				<input type="range" id="advance" min="0" max="100" value="60">
+				<span id="advanceValue">60%</span>
+			</div>
+		</section>
+
+		<!-- Sección de cotización -->
+		<section class="quotation">
+			<div class="header">
+				<div class="title-client">
+					<h1>COTIZACIÓN</h1>
+					<div class="client-info">
+						<h3>CLIENTE</h3>
+						<p id="clientNameDisplay">&lt;NOMBRE VACÍO&gt;</p>
+						<p class="date">31 DE ENERO DE 2025</p>
+					</div>
+				</div>
+				<img src="logo.png" alt="DOM&TICS Logo" class="logo">
+			</div>
+
+			<div class="description-section">
+				<div class="description-header">
+					<h3>Descripción</h3>
+				</div>
+				<div id="itemsList" class="items-list">
+					<!-- Los items se agregarán aquí dinámicamente -->
+				</div>
+			</div>
+
+			<div class="totals">
+				<div class="total-item">
+					<span>Subtotal</span>
+					<span id="subtotal">$0</span>
+				</div>
+				<div class="total-item">
+					<span>Descuento</span>
+					<span id="discount">$0</span>
+				</div>
+				<div class="total-item total">
+					<span>TOTAL</span>
+					<span id="total">$0</span>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
